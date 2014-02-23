@@ -13,10 +13,10 @@ class MallardDuck implements Quackable, QuackObservable {
 	public function quack() 
         {
 	    echo "Quack";
-	    $this->notifyObservers();
+	    $this->notify();
 	}
 
-	public function toString() 
+	public function __toString() 
         {
 	     return "Mallard Duck";
 	}

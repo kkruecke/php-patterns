@@ -9,9 +9,9 @@ class Quackologist implements \SplObserver {
         {
             if ($subject instanceof QuackObservable) {
                 
-                $duck = (Quackable) $subject;
                 
-                echo "Quackologist: " . $duck . " just quacked.";
+                echo "Quackologist: " . $subject->__toString() . " just quacked.\n";
+                echo "Again Quackologist: " . $subject . " just quacked.\n\n";
             }
 	}
  

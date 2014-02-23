@@ -12,7 +12,7 @@ class RubberDuck implements Quackable, QuackObservable {
 	public function quack() 
         {
 		echo "Squeak";
-		$this->notifyObservers();
+		$this->notify();
 	}
   
 	public function __toString() 

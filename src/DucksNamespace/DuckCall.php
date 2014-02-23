@@ -15,7 +15,7 @@ class DuckCall implements Quackable, QuackObservable {
 	public function quack() 
         {
 	      echo "<< Duck Call >>";
-	      $this->notifyObservers();
+	      $this->notify();
 	}
 
 	public function __toString() 
