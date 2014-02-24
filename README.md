@@ -12,11 +12,8 @@ Quackologist. A Quackologist observes various types of duck classes that impleme
       }
     }
 
-The reusable Observable trait looks like this
+**Observable** is the reusable implementation of the **SplSubject** abstract methods.
 
-   /*
-    *  Observable is the reusable implementation of SplSubject abstract methods.
-    */
    trait Observable { 
 
      private $observers = array();
@@ -40,14 +37,14 @@ The reusable Observable trait looks like this
      }
    }
   
-The subject duck classes implement quack() and whoami().
+The subject duck classes implement quack(), from the Quackable interface, and whoami().
 
-   interface Quackable  {
+    interface Quackable  {
 
       function quack(); 
-   }
+    }
  
-   class RedheadDuck implements Quackable, \SplSubject {
+    class RedheadDuck implements Quackable, \SplSubject {
         use Observable; 
 
 	public function __construct() {}
@@ -65,6 +62,7 @@ The main code instantiates ducks and then attaches a Quackologist observer to ea
     $array_of_duck = array();
 
     $array_of_ducks[] = new RedheadDuck();
+    //. . . snip
 
     $quackologist = new Quackologist();
 
