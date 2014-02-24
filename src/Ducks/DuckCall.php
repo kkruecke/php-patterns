@@ -1,8 +1,8 @@
 <?php
-namespace DucksNamespace;
+namespace Ducks;
 use \Library\Observable;
 
-class DuckCall implements Quackable, QuackObservable {
+class DuckCall implements Quackable, \SplSubject {
 
 	//Observable observable;
 	use Observable;
@@ -19,6 +19,11 @@ class DuckCall implements Quackable, QuackObservable {
 	}
 
 	public function __toString() 
+        {
+		return "Duck Call";
+	}
+        
+        public function whoami() 
         {
 		return "Duck Call";
 	}

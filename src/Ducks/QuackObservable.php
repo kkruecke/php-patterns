@@ -1,5 +1,5 @@
 <?php
-namespace DucksNamespace;
+namespace Ducks;
 
 interface QuackObservable extends \SplSubject {
     

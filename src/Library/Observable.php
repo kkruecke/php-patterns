@@ -21,7 +21,7 @@ trait Observable {
    {
       foreach($this->observers as $observer) {
 
-           $observer->update($this);  
+           $observer->update($this);  // The type of '$this' is that of the derived which has "use Observable".
       }
    }
 }

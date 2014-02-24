@@ -1,5 +1,5 @@
 <?php
-namespace DucksNamespace;
+namespace Ducks;
 /*
  * Things that can quack whether living ducks or mechanical.
  */

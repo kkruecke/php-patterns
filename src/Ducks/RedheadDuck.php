@@ -1,8 +1,8 @@
 <?php
-namespace DucksNamespace;
+namespace Ducks;
 use Library\Observable;
 
-class RedheadDuck implements Quackable, QuackObservable {
+class RedheadDuck implements Quackable, \SplSubject {
     
         use Observable;
        
@@ -20,4 +20,10 @@ class RedheadDuck implements Quackable, QuackObservable {
         {
 		return "Redhead Duck";
 	}
+        
+       	public function whoami() 
+        {
+		return "Redhead Duck";
+	}
+
 }
