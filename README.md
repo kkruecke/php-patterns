@@ -79,9 +79,9 @@ The main code instantiates ducks and then attaches a Quackologist observer to ea
 Note
 ----
 
-Even though **Quackologist::update(\SplSubject)** takes a reference to \SplSubject, this will not result in a compile error, unlike in C++, which would complain
+Even though **Quackologist::update(\SplSubject)** takes a reference to \SplSubject, this will not result in a compile error.  A language like C++ would complain
 
     error: no member named 'whoami' in 'Base'
  
-because Base has not whoami() method. As long as you pass at runtime a class derived from **\SplSubject** that implements **whoami()**, this code will work. Only if
---at runtime--you pass an SplSubject instance that does not implement whoami() will you get an error. 
+because Base has no whoami() method. As long as you pass at runtime a class derived from **\SplSubject** that implements **whoami()**, this code will work. Only if
+--at runtime--you pass an SplSubject instance that does not implement **whoami()** will you get an error. 
