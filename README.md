@@ -14,29 +14,29 @@ Quackologist. A Quackologist observes various types of duck classes that impleme
 
 **Observable** is the reusable implementation of the **SplSubject** abstract methods.
 
-   trait Observable { 
+    trait Observable { 
 
-     private $observers = array();
+      private $observers = array();
 
-     public function attach ( \SplObserver $observer )
-     {
-       $this->observers[spl_object_hash($observer)] = $observer;
-     }
-
-     public function detach( \SplObserver $observer )
-     {
-       unset($this->observers[spl_object_hash($observer)]);	
-     }
-
-     public function notify()
-     {
-        foreach($this->observers as $observer) {
-  
-             $observer->update($this);  
-        }
-     }
-   }
-  
+      public function attach ( \SplObserver $observer )
+      {
+        $this->observers[spl_object_hash($observer)] = $observer;
+      }
+ 
+      public function detach( \SplObserver $observer )
+      {
+        unset($this->observers[spl_object_hash($observer)]);	
+      }
+ 
+      public function notify()
+      {
+         foreach($this->observers as $observer) {
+   
+              $observer->update($this);  
+         }
+      }
+    }
+   
 The subject duck classes implement quack(), from the Quackable interface, and whoami().
 
     interface Quackable  {
