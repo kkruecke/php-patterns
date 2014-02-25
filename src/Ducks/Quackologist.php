@@ -11,7 +11,10 @@ class Quackologist implements \SplObserver {
          */
 	public function update(\SplSubject $subject) 
         {
-               // The code below works fine even though whoami() is not a method of SplSubject.
+           if ($subject instanceof QuackObservable) {
+
+               // This would generate a compile error in C++. 
                echo ". " . $subject->whoami() . " just quacked.\n\n";
+           } 
 	}
  }

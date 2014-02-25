@@ -2,7 +2,7 @@
 namespace Ducks;
 use \Library\Observable;
 
-class MallardDuck implements Quackable, \SplSubject {
+class MallardDuck implements Quackable, QuackObservable {
 
        use Observable;
  

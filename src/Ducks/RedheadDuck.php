@@ -2,7 +2,7 @@
 namespace Ducks;
 use Library\Observable;
 
-class RedheadDuck implements Quackable, \SplSubject {
+class RedheadDuck implements Quackable, QuackObservable {
     
         use Observable;
        

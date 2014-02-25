@@ -2,7 +2,7 @@
 namespace Ducks;
 use \Library\Observable;
 
-class RubberDuck implements Quackable,  \SplSubject {
+class RubberDuck implements Quackable,  QuackObservable {
         use Observable;    
         
 	public function __construct()
